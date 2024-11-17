@@ -7,12 +7,18 @@ import noteRouter from "./routes/noteRoutes.js";
 
 dotenv.config();
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: 'http://localhost:3000', // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed methods
+  credentials: true // Allow credentials if needed
+}));
+
 connectDB();
 app.use(express.json());
 
 app.get("/test", (req, res) => {
-  res.send("Helo from server");
+  res.send("Hello from server");
 });
 
 app.use("/api/user", userRouter);
