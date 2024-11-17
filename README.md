@@ -17,7 +17,7 @@ npm install
 * Credentials:
 ```bash
 PORT=3000
-MONGODB_URI=YOUR MONGODB URI
+MONGO_URI=YOUR MONGODB URI
 JWT_SECRET=YOUR SECRET KEY
 ```
 ### Step 4: Start the Backend Server by
