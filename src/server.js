@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://digital-notes-26b4.onrender.com'] // Replace with your frontend URL
+  origin: 'http://localhost:3000', 'https://digital-notes-26b4.onrender.com' // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed methods
   credentials: true // Allow credentials if needed
 }));
